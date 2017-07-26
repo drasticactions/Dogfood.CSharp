@@ -83,6 +83,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="XibFree">
+      <HintPath>..\packages\XibFree.1.1.0\lib\xamarinios10\XibFree.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -90,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="CoreML\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -98,6 +103,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -106,6 +112,16 @@
     <Compile Include="MainMenuViewController.designer.cs">
       <DependentUpon>MainMenuViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoreML\SqueezeNetCameraViewController.cs" />
+    <Compile Include="Utilities\ImageUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SqueezeNet.mlmodel" />
+    <BundleResource Include="Resources\SqueezeNet.mlmodelc\coremldata.bin" />
+    <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.net" />
+    <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.shape" />
+    <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.weights" />
+    <BundleResource Include="Resources\SqueezeNet.mlmodelc\model\coremldata.bin" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
