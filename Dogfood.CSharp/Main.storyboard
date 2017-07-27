@@ -80,8 +80,40 @@
             </objects>
             <point key="canvasLocation" x="-12" y="1324"/>
         </scene>
+        <scene sceneID="1140">
+            <objects>
+                <viewController id="1141" sceneMemberID="viewController" customClass="LavaViewController" storyboardIdentifier="LavaViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1147"/>
+                        <viewControllerLayoutGuide type="bottom" id="1150"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1144">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1143" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                            </arscnView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1145" firstItem="1143" firstAttribute="trailing" secondItem="1144" secondAttribute="trailingMargin" constant="20"/>
+                            <constraint id="1146" firstItem="1143" firstAttribute="top" secondItem="1147" secondAttribute="bottom"/>
+                            <constraint id="1148" firstItem="1144" firstAttribute="leadingMargin" secondItem="1143" secondAttribute="leading" constant="20"/>
+                            <constraint id="1149" firstItem="1143" firstAttribute="bottom" secondItem="1150" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SceneView" destination="1143" id="name-outlet-1143"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1151" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="655"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cspam.png" width="100" height="100"/>
+        <image name="Lava" width="160" height="160"/>
     </resources>
 </document>

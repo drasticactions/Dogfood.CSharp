@@ -90,6 +90,8 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Lava.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Lava.imageset\lava-0.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -97,6 +99,9 @@
     <Folder Include="Utilities\" />
     <Folder Include="Photos\" />
     <Folder Include="Arkit\" />
+    <Folder Include="Assets.xcassets\Lava.imageset\" />
+    <Folder Include="ObjectExtensions\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -122,6 +127,25 @@
     <Compile Include="ShipViewController.designer.cs">
       <DependentUpon>ShipViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="LavaViewController.cs" />
+    <Compile Include="LavaViewController.designer.cs">
+      <DependentUpon>LavaViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectExtensions\SCNVector3Extensions.cs" />
+    <Compile Include="ObjectExtensions\ARSCNViewExtensions.cs" />
+    <Compile Include="ObjectExtensions\CGPointExtensions.cs" />
+    <Compile Include="ObjectExtensions\CGRectExtensions.cs" />
+    <Compile Include="ObjectExtensions\CGSizeExtensions.cs" />
+    <Compile Include="ObjectExtensions\ListExtensions.cs" />
+    <Compile Include="ObjectExtensions\NSSetExtenions.cs" />
+    <Compile Include="ObjectExtensions\SCNMaterialExtensions.cs" />
+    <Compile Include="ObjectExtensions\SCNNodeExtensions.cs" />
+    <Compile Include="ObjectExtensions\UIImageExtensions.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Interfaces\IObjectThatReactsToScale.cs" />
+    <Compile Include="Interfaces\IVirtualObjectSelectionViewControllerDelegate.cs" />
+    <Compile Include="Utilities\HitTestRay.cs" />
+    <Compile Include="Utilities\FeatureHitTestResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />
@@ -131,6 +155,7 @@
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.weights" />
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model\coremldata.bin" />
     <BundleResource Include="Resources\cspam.png" />
+    <BundleResource Include="Resources\lava-0.png" />
   </ItemGroup>
   <ItemGroup>
     <SceneKitAsset Include="art.scnassets\ship.scn" />

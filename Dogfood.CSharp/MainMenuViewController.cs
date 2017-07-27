@@ -14,6 +14,11 @@ namespace Dogfood.CSharp
 		{
             MainMenu[] tableItems = new MainMenu[]
             {
+				new MainMenu(){
+					ControllerName = "LavaViewController",
+					ControllerType = "UIViewController",
+					FromStoryboard = true
+				},
                 new MainMenu(){
                     ControllerName = "ShipViewController",
                     ControllerType = "UIViewController",
