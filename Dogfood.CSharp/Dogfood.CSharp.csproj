@@ -156,6 +156,7 @@
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model\coremldata.bin" />
     <BundleResource Include="Resources\cspam.png" />
     <BundleResource Include="Resources\lava-0.png" />
+    <BundleResource Include="Resources\Icon2.png" />
   </ItemGroup>
   <ItemGroup>
     <SceneKitAsset Include="art.scnassets\ship.scn" />

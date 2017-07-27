@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="225">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1634">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1143" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1143" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                             </arscnView>
                         </subviews>
@@ -111,9 +111,67 @@
             </objects>
             <point key="canvasLocation" x="634" y="655"/>
         </scene>
+        <scene sceneID="1633">
+            <objects>
+                <splitViewController id="1634" sceneMemberID="viewController">
+                    <connections>
+                        <segue id="1724" destination="225" kind="relationship" relationship="masterViewController"/>
+                        <segue id="1846" destination="1742" kind="relationship" relationship="detailViewController"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1637" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959" y="2284"/>
+        </scene>
+        <scene sceneID="1741">
+            <objects>
+                <navigationController id="1742" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1744">
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue id="2447" destination="2337" kind="relationship" relationship="rootViewController"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1745" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="2208"/>
+        </scene>
+        <scene sceneID="2336">
+            <objects>
+                <viewController id="2337" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2334"/>
+                        <viewControllerLayoutGuide type="bottom" id="2335"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2338">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2691" translatesAutoresizingMaskIntoConstraints="NO" image="Icon2.png">
+                                <rect key="frame" x="20" y="92" width="560" height="488"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="2935" firstItem="2691" firstAttribute="leading" secondItem="2338" secondAttribute="leadingMargin"/>
+                            <constraint id="2936" firstItem="2691" firstAttribute="trailing" secondItem="2338" secondAttribute="trailingMargin"/>
+                            <constraint id="2937" firstItem="2691" firstAttribute="top" secondItem="2334" secondAttribute="bottom" constant="28"/>
+                            <constraint id="2938" firstItem="2338" firstAttribute="bottom" secondItem="2691" secondAttribute="bottom" constant="20"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Dogfood" id="2446" key="navigationItem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2339" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="2207"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cspam.png" width="100" height="100"/>
         <image name="Lava" width="160" height="160"/>
+        <image name="lava-0.png" width="160" height="160"/>
+        <image name="Icon2.png" width="1024" height="1024"/>
     </resources>
 </document>

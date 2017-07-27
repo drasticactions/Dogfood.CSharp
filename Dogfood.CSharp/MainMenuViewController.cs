@@ -33,7 +33,7 @@ namespace Dogfood.CSharp
 					ControllerType = "UICollectionViewController"
 				},
 			};
-			this.TableView.Source = new TableSource(tableItems, this);
+			this.TableView.Source = new MainMenuTableSource(tableItems, ((UINavigationController)SplitViewController.ViewControllers[1]).TopViewController);
 			this.TableView.ReloadData();
 		}
     }
@@ -47,14 +47,14 @@ namespace Dogfood.CSharp
         public bool FromStoryboard { get; set; }
     }
 
-	public class TableSource : UITableViewSource
+	public class MainMenuTableSource : UITableViewSource
 	{
 
 		MainMenu[] TableItems;
 		string CellIdentifier = "TableCell";
 		UIViewController Owner;
 
-		public TableSource(MainMenu[] items, UIViewController owner)
+		public MainMenuTableSource(MainMenu[] items, UIViewController owner)
 		{
 			Owner = owner;
 			TableItems = items;

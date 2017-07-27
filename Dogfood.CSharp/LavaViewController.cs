@@ -94,7 +94,7 @@ namespace Dogfood.CSharp
             Console.WriteLine("Add Node");
 			DispatchQueue.MainQueue.DispatchAsync(() => {
 				var planeNode = CreatePlaneNode((ARPlaneAnchor)anchor);
-				node.AddChildNode(planeNode);
+				SceneView.Scene.RootNode.AddChildNode(planeNode);
             });
         }
 
@@ -105,7 +105,7 @@ namespace Dogfood.CSharp
 			DispatchQueue.MainQueue.DispatchAsync(() => {
                 //Array.Clear(node.ChildNodes, 0, node.ChildNodes.Length);
 				var planeNode = CreatePlaneNode((ARPlaneAnchor)anchor);
-				node.AddChildNode(planeNode);
+				SceneView.Scene.RootNode.AddChildNode(planeNode);
 			});
         }
 
