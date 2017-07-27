@@ -29,6 +29,9 @@
                         </connections>
                     </tableView>
                     <navigationItem title="Dogfood" id="298" key="navigationItem"/>
+                    <connections>
+                        <segue id="3517" destination="1742" kind="showDetail" identifier="showDetail"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="207" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="908" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-12" y="1324"/>
+            <point key="canvasLocation" x="688" y="1321"/>
         </scene>
         <scene sceneID="1140">
             <objects>

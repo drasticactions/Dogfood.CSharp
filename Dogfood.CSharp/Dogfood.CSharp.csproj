@@ -102,6 +102,7 @@
     <Folder Include="Assets.xcassets\Lava.imageset\" />
     <Folder Include="ObjectExtensions\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Vision\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -146,6 +147,8 @@
     <Compile Include="Interfaces\IVirtualObjectSelectionViewControllerDelegate.cs" />
     <Compile Include="Utilities\HitTestRay.cs" />
     <Compile Include="Utilities\FeatureHitTestResult.cs" />
+    <Compile Include="Vision\FaceCameraViewController.cs" />
+    <Compile Include="Vision\TextCameraViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />

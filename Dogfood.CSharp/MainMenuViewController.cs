@@ -29,12 +29,36 @@ namespace Dogfood.CSharp
                     ControllerType = "UIViewController"
                 },
 				new MainMenu(){
+					ControllerName = "Vision.FaceCameraViewController",
+					ControllerType = "UIViewController"
+				},
+				new MainMenu(){
+					ControllerName = "Vision.TextCameraViewController",
+					ControllerType = "UIViewController"
+				},
+				new MainMenu(){
 					ControllerName = "Photos.PhotosViewController",
 					ControllerType = "UICollectionViewController"
 				},
 			};
-			this.TableView.Source = new MainMenuTableSource(tableItems, ((UINavigationController)SplitViewController.ViewControllers[1]).TopViewController);
+			this.TableView.Source = new MainMenuTableSource(tableItems, ((UINavigationController)SplitViewController.ViewControllers[1]).TopViewController, SplitViewController);
 			this.TableView.ReloadData();
+		}
+
+		public override void ViewWillAppear(bool animated)
+		{
+			ClearsSelectionOnViewWillAppear = SplitViewController.Collapsed;
+			base.ViewWillAppear(animated);
+		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier == "showDetail")
+			{
+				var controller = ((UINavigationController)segue.DestinationViewController);
+				controller.NavigationItem.LeftBarButtonItem = SplitViewController.DisplayModeButtonItem;
+				controller.NavigationItem.LeftItemsSupplementBackButton = true;
+			}
 		}
     }
 
@@ -53,10 +77,12 @@ namespace Dogfood.CSharp
 		MainMenu[] TableItems;
 		string CellIdentifier = "TableCell";
 		UIViewController Owner;
+        UISplitViewController SplitView;
 
-		public MainMenuTableSource(MainMenu[] items, UIViewController owner)
+		public MainMenuTableSource(MainMenu[] items, UIViewController owner, UISplitViewController split)
 		{
 			Owner = owner;
+            SplitView = split;
 			TableItems = items;
 		}
 
@@ -73,11 +99,13 @@ namespace Dogfood.CSharp
                     if (item.FromStoryboard) {
 						var storyBoard = UIStoryboard.FromName("Main", null);
                         var storyboardController = storyBoard.InstantiateViewController(item.ControllerName);
-                        Owner.NavigationController.PushViewController(storyboardController, true);
+						Owner.NavigationController.PushViewController(storyboardController, true);
+						SplitView.ShowDetailViewController(storyboardController.NavigationController, Owner);
 					}
                     else {
 						var controller = Activator.CreateInstance(Type.GetType($"Dogfood.CSharp.{item.ControllerName}")) as UIViewController;
 						Owner.NavigationController.PushViewController(controller, true);
+						SplitView.ShowDetailViewController(controller.NavigationController, Owner);
 						break;
                     }
                     break;
@@ -91,6 +119,7 @@ namespace Dogfood.CSharp
                             throw new Exception("No controller selected!");
                     }
                     Owner.NavigationController.PushViewController(uiCollectionViewController, true);
+                    SplitView.ShowDetailViewController(uiCollectionViewController.NavigationController, Owner);
 					break;
             }
 		}
