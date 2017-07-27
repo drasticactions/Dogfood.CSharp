@@ -49,6 +49,37 @@
             </objects>
             <point key="canvasLocation" x="-746" y="663"/>
         </scene>
+        <scene sceneID="905">
+            <objects>
+                <viewController id="906" sceneMemberID="viewController" customClass="ShipViewController" storyboardIdentifier="ShipViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="903"/>
+                        <viewControllerLayoutGuide type="bottom" id="904"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="907">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="910" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                            </arscnView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="911" firstItem="910" firstAttribute="trailing" secondItem="907" secondAttribute="trailingMargin" constant="20"/>
+                            <constraint id="912" firstItem="910" firstAttribute="top" secondItem="903" secondAttribute="bottom"/>
+                            <constraint id="913" firstItem="907" firstAttribute="leadingMargin" secondItem="910" secondAttribute="leading" constant="20"/>
+                            <constraint id="914" firstItem="910" firstAttribute="bottom" secondItem="904" secondAttribute="top"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SceneView" destination="910" id="name-outlet-910"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="908" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="1324"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cspam.png" width="100" height="100"/>

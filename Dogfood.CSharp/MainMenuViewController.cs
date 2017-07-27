@@ -12,8 +12,13 @@ namespace Dogfood.CSharp
 
 		public override void ViewDidLoad()
 		{
-			MainMenu[] tableItems = new MainMenu[]
-			{
+            MainMenu[] tableItems = new MainMenu[]
+            {
+                new MainMenu(){
+                    ControllerName = "ShipViewController",
+                    ControllerType = "UIViewController",
+                    FromStoryboard = true
+				},
                 new MainMenu(){
                     ControllerName = "CoreML.SqueezeNetCameraViewController",
                     ControllerType = "UIViewController"
@@ -33,6 +38,8 @@ namespace Dogfood.CSharp
         public string ControllerType { get; set; }
 
         public string ControllerName { get; set; }
+
+        public bool FromStoryboard { get; set; }
     }
 
 	public class TableSource : UITableViewSource
@@ -58,8 +65,16 @@ namespace Dogfood.CSharp
 			var item = TableItems[indexPath.Row];
             switch(item.ControllerType) {
                 case "UIViewController":
-					var controller = Activator.CreateInstance(Type.GetType($"Dogfood.CSharp.{item.ControllerName}")) as UIViewController;
-					Owner.NavigationController.PushViewController(controller, true);
+                    if (item.FromStoryboard) {
+						var storyBoard = UIStoryboard.FromName("Main", null);
+                        var storyboardController = storyBoard.InstantiateViewController(item.ControllerName);
+                        Owner.NavigationController.PushViewController(storyboardController, true);
+					}
+                    else {
+						var controller = Activator.CreateInstance(Type.GetType($"Dogfood.CSharp.{item.ControllerName}")) as UIViewController;
+						Owner.NavigationController.PushViewController(controller, true);
+						break;
+                    }
                     break;
 				case "UICollectionViewController":
                     UICollectionViewController uiCollectionViewController;

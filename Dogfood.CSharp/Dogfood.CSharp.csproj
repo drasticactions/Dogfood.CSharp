@@ -96,6 +96,7 @@
     <Folder Include="CoreML\" />
     <Folder Include="Utilities\" />
     <Folder Include="Photos\" />
+    <Folder Include="Arkit\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -117,6 +118,10 @@
     <Compile Include="Utilities\ImageUtils.cs" />
     <Compile Include="Photos\PhotosViewController.cs" />
     <Compile Include="Photos\PhotoViewController.cs" />
+    <Compile Include="ShipViewController.cs" />
+    <Compile Include="ShipViewController.designer.cs">
+      <DependentUpon>ShipViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />
@@ -126,6 +131,10 @@
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.weights" />
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model\coremldata.bin" />
     <BundleResource Include="Resources\cspam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SceneKitAsset Include="art.scnassets\ship.scn" />
+    <SceneKitAsset Include="art.scnassets\texture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
