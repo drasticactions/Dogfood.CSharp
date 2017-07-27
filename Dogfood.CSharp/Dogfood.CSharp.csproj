@@ -95,6 +95,7 @@
     <Folder Include="Resources\" />
     <Folder Include="CoreML\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -114,6 +115,8 @@
     </Compile>
     <Compile Include="CoreML\SqueezeNetCameraViewController.cs" />
     <Compile Include="Utilities\ImageUtils.cs" />
+    <Compile Include="Photos\PhotosViewController.cs" />
+    <Compile Include="Photos\PhotoViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />
@@ -122,6 +125,7 @@
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.shape" />
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model.espresso.weights" />
     <BundleResource Include="Resources\SqueezeNet.mlmodelc\model\coremldata.bin" />
+    <BundleResource Include="Resources\cspam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -50,4 +50,7 @@
             <point key="canvasLocation" x="-746" y="663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cspam.png" width="100" height="100"/>
+    </resources>
 </document>
