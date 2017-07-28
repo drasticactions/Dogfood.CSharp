@@ -149,6 +149,7 @@
     <Compile Include="Utilities\FeatureHitTestResult.cs" />
     <Compile Include="Vision\FaceCameraViewController.cs" />
     <Compile Include="Vision\TextCameraViewController.cs" />
+    <Compile Include="Vision\SquareFaceCameraViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />

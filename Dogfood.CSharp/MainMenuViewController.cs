@@ -33,6 +33,10 @@ namespace Dogfood.CSharp
 					ControllerType = "UIViewController"
 				},
 				new MainMenu(){
+					ControllerName = "Vision.SquareFaceCameraViewController",
+					ControllerType = "UIViewController"
+				},
+				new MainMenu(){
 					ControllerName = "Vision.TextCameraViewController",
 					ControllerType = "UIViewController"
 				},

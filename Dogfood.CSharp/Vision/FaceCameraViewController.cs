@@ -141,7 +141,7 @@ namespace Dogfood.CSharp.Vision
 				faceLandmarks.InputFaceObservations = results;
 				DetectLandmarks(image);
 
-				DispatchQueue.MainQueue.DispatchAsync(() => shapeLayer.Sublayers = Array.Empty<CALayer>());
+                DispatchQueue.MainQueue.DispatchAsync(() => shapeLayer.Sublayers = Array.Empty<CALayer>());
 			}
 		}
 
