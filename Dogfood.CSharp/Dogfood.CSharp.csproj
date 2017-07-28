@@ -103,6 +103,8 @@
     <Folder Include="ObjectExtensions\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Vision\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Appearance\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -150,6 +152,8 @@
     <Compile Include="Vision\FaceCameraViewController.cs" />
     <Compile Include="Vision\TextCameraViewController.cs" />
     <Compile Include="Vision\SquareFaceCameraViewController.cs" />
+    <Compile Include="Settings\Theme.cs" />
+    <Compile Include="Appearance\ThemeViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\SqueezeNet.mlmodel" />

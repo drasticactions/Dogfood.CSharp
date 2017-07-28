@@ -15,6 +15,10 @@ namespace Dogfood.CSharp
             MainMenu[] tableItems = new MainMenu[]
             {
 				new MainMenu(){
+					ControllerName = "Appearance.ThemeViewController",
+					ControllerType = "UIViewController",
+				},
+				new MainMenu(){
 					ControllerName = "LavaViewController",
 					ControllerType = "UIViewController",
 					FromStoryboard = true
@@ -125,6 +129,9 @@ namespace Dogfood.CSharp
                     Owner.NavigationController.PushViewController(uiCollectionViewController, true);
                     SplitView.ShowDetailViewController(uiCollectionViewController.NavigationController, Owner);
 					break;
+                case "UITableViewController":
+                    
+                    break;
             }
 		}
 
